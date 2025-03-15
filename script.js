@@ -17,7 +17,7 @@ async function fetchWaterLevel() {
     let waterLevel = parseFloat(data.feeds[0].field2);
 
     // Subtract 34.46 from the fetched water level
-    waterLevel = waterLevel - 34.46;
+    waterLevel = 34.46 - waterLevel;
 
     // If the resulting value is negative, set it to 0
     if (waterLevel < 0) {
