@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Level Monitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #alarm {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffcccb;
+            color: red;
+            font-size: 1.5em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Water Level Monitor</h1>
+    <div id="water-level">Loading water level...</div>
+    <div id="alarm">
+        <h2>ALARM: Water Level is Low!</h2>
+    </div>
+
+    <!-- The audio element for the alarm sound -->
+    <audio id="alarm-sound" src="alarm-sound.mp3" preload="auto" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
