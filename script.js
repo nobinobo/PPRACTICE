@@ -17,7 +17,7 @@ async function fetchWaterLevel() {
     let waterLevel = parseFloat(data.feeds[0].field2);
 
     // Subtract 34.46 from the fetched water level
-    waterLevel = 34.46 - waterLevel;
+    waterLevel = waterLevel;
 
     // If the resulting value is negative, set it to 0
     if (waterLevel < 0) {
@@ -30,7 +30,7 @@ async function fetchWaterLevel() {
     const alarmSound = document.getElementById("alarm-sound");
 
     // Trigger the alarm if the adjusted water level is 13 or above
-    if (waterLevel >= 13) {
+    if (waterLevel >= 30) {
       document.getElementById("alarm").style.display = "block";
       alarmSound.play(); // Play the alarm sound
     } else {
